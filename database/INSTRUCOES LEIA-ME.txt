@@ -1,0 +1,12 @@
+1 - Instale o Xampp de acordo com a versão do windows
+2 - Abra o xampp, e starte o serviço apache e mysql
+3 - apra no navegador a url "localhost/phpmyadmin"
+4 - crie um banco chamado "db_equipbarras"
+5 - vá na aba importar e selecione o arquivo "banco.sql".
+6 - Clique em importar
+7 - Use o sistema.
+
+Obs1. O passo 2 deve ser repetido toda vez que o computador for iniciado.
+
+Obs2. Fábio, caso consiga instalar e setar o xampp pra iniciar com o windows 
+      COM OS SERVICOS APACHE E MYSQL abertos, ignore a Obs1.
