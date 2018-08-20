@@ -1,7 +1,7 @@
 <?php
 	
 	include "php/conection.php";
-	$branch = "master";
+	$branch = "master merged ok";
 
 ?>
 <!DOCTYPE html>
