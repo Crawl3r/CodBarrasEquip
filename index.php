@@ -19,13 +19,14 @@
     <meta name="description" content="See this example of responsive three highlights without using javascript. Using only html and css. by Palloi Hofmann">
     
     <style>
-    	body {
-		  background: tomato;
-		  text-align: center;
-		  justify-content: center;
-		  align-items: center;
-		  font-size: 16px;
-		}
+	
+		body {
+  background: gray;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+
 		.button {
 		  transform: translate(-50%, 0);
 		  font-family: inherit;
