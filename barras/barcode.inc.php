@@ -9,7 +9,7 @@ private $into;
 private $digitArray = array(0=>"00110",1=>"10001",2=>"01001",3=>"11000",4=>"00101",5=>"10100",6=>"01100",7=>"00011",8=>"10010",9=>"01010");
 	function __construct($value,$into=1, $filename = 'barcode.gif', $width_bar=300, $height_bar=65, $show_codebar=false) { 	 
       
-	  $lower = 1 ; $hight = 50;     
+	   
     $this->into = $into;
           $this->file = $filename;
 	  for($count1=9;$count1>=0;$count1--){ 
@@ -55,7 +55,7 @@ private $digitArray = array(0=>"00110",1=>"10001",2=>"01001",3=>"11000",4=>"0010
   
  
 	while (strlen($text) > 0) { 
-	  $i = round($this->JSK_left($text,2)); 
+	  $i = round(/** @scrutinizer ignore-type */ $this->JSK_left($text,2)); 
 	  $text = $this->JSK_right($text,strlen($text)-2); 
 	   
 	  $f = $this->digitArray[$i]; 
@@ -66,7 +66,7 @@ private $digitArray = array(0=>"00110",1=>"10001",2=>"01001",3=>"11000",4=>"0010
 		}else{ 
 		  $f1 = $wide ; 
 		} 
-	  imagefilledrectangle($img, $pos,5,$pos-1+$f1,$height_bar,$cl_black)  ; 
+	  imagefilledrectangle($img, $pos,5,/** @scrutinizer ignore-type */ $pos-1+$f1,$height_bar,$cl_black)  ; 
 	  $pos = $pos + $f1 ;   
 	   
 	  if (substr($f,$i,1) == "0") { 
@@ -74,7 +74,7 @@ private $digitArray = array(0=>"00110",1=>"10001",2=>"01001",3=>"11000",4=>"0010
 		}else{ 
 		  $f2 = $wide ; 
 		} 
-	  imagefilledrectangle($img, $pos,5,$pos-1+$f2,$height_bar,$cl_white)  ; 
+	  imagefilledrectangle($img, $pos,5,/** @scrutinizer ignore-type */ $pos-1+$f2,$height_bar,$cl_white)  ; 
 	  $pos = $pos + $f2 ;   
 	  } 
 	} 
@@ -86,7 +86,7 @@ private $digitArray = array(0=>"00110",1=>"10001",2=>"01001",3=>"11000",4=>"0010
 	
 	
 	imagefilledrectangle($img, $pos,5,$pos-1+$thin,$height_bar,$cl_black); 
-	$pos=$pos+$thin; 
+	//$pos=$pos+$thin; 
   
   if ($show_codebar) {
     imagestring($img, 5, 0, $height_bar+5, " ".$value, imagecolorallocate($img, 0, 0, 0));
@@ -112,5 +112,3 @@ private $digitArray = array(0=>"00110",1=>"10001",2=>"01001",3=>"11000",4=>"0010
 		imagedestroy($image);
 	}
 }
-
-?>
