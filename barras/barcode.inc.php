@@ -70,11 +70,11 @@ private $digitArray = array(0=>"00110",1=>"10001",2=>"01001",3=>"11000",4=>"0010
 		}else{ 
 		  $f2 = $wide ; 
 		} 
-	  imagefilledrectangle($img, $pos,5,/** @scrutinizer ignore-type */ $pos-1+$f2,$height_bar,$cl_white)  ; 
+	  imagefilledrectangle($img, /** @scrutinizer ignore-type */$pos,5,/** @scrutinizer ignore-type */ $pos-1+$f2,$height_bar,$cl_white)  ; 
 	  $pos = $pos + $f2 ;   
 	  } 
 	} 
-	imagefilledrectangle($img, $pos,5,$pos-1+$wide,$height_bar,$cl_black); 
+	imagefilledrectangle($img, /** @scrutinizer ignore-type */$pos,5,$pos-1+$wide,$height_bar,$cl_black); 
 	$pos=$pos+$wide; 
 	
 	imagefilledrectangle($img, $pos,5,$pos-1+$thin,$height_bar,$cl_white); 
